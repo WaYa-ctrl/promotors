@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>PRO MOTORS — Автосервис на Уралмаше | Ремонт Hyundai и KIA в Екатеринбурге</title>
+  <meta name="description" content="Профессиональный автосервис PRO MOTORS на Уралмаше. Ремонт Hyundai и KIA, диагностика, ТО, кузовной ремонт, чип-тюнинг. Екатеринбург, ул. Машиностроителей, 45А.">
+  <meta name="keywords" content="автосервис екатеринбург, ремонт hyundai, ремонт kia, диагностика авто, чип тюнинг, кузовной ремонт, автосервис уралмаш">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://promotors.pro/">
+
+  <!-- Security headers via meta -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PRO MOTORS — Автосервис на Уралмаше">
+  <meta property="og:description" content="Ремонт Hyundai и KIA в Екатеринбурге. Гарантия 1 год, более 1000 запчастей в наличии.">
+  <meta property="og:url" content="https://promotors.pro/">
+  <meta property="og:image" content="images/bg-main-1-scaled.jpg">
+
+  <!-- Favicons -->
+  <link rel="icon" href="images/cropped-promotors.pro_-32x32.png" sizes="32x32">
+  <link rel="icon" href="images/cropped-promotors.pro_-192x192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="images/cropped-promotors.pro_-180x180.png">
+
+  <!-- Fonts: only woff2, subset=cyrillic+latin -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@400;500&display=swap">
+
+  <!-- Font Awesome Icons (CDN woff2 only) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <style>
+    /* ===== CSS CUSTOM PROPERTIES ===== */
+    :root {
+      --c-bg: #0e0f14;
+      --c-surface: #16181f;
+      --c-card: #1d2029;
+      --c-border: rgba(255,255,255,0.07);
+      --c-accent: #e8320a;
+      --c-accent-light: #ff4f26;
+      --c-accent-glow: rgba(232,50,10,0.18);
+      --c-text: #f0f0f0;
+      --c-muted: #8a8d9a;
+      --c-white: #ffffff;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --transition: 0.25s ease;
+      --shadow: 0 8px 32px rgba(0,0,0,0.4);
+      --font-display: 'Montserrat', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--c-bg);
+      color: var(--c-text);
+      line-height: 1.6;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; }
+
+    /* ===== LAYOUT UTILITIES ===== */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 80px 0; }
+    .section--dark { background: var(--c-surface); }
+    .section-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--c-accent);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 900;
+      color: var(--c-white);
+      margin-bottom: 16px;
+    }
+    .section-subtitle {
+      font-size: 17px;
+      color: var(--c-muted);
+      max-width: 560px;
+    }
+    .section-head { text-align: center; margin-bottom: 56px; }
+    .section-head .section-subtitle { margin: 0 auto; }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--c-accent);
+      color: #fff;
+      border: 2px solid var(--c-accent);
+    }
+    .btn-primary:hover {
+      background: var(--c-accent-light);
+      border-color: var(--c-accent-light);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px var(--c-accent-glow);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--c-white);
+      border: 2px solid rgba(255,255,255,0.25);
+    }
+    .btn-outline:hover {
+      border-color: var(--c-accent);
+      color: var(--c-accent);
+    }
+
+    /* ===== TOP BAR ===== */
+    .topbar {
+      background: var(--c-accent);
+      padding: 8px 0;
+      font-size: 13px;
+      font-weight: 600;
+      font-family: var(--font-display);
+    }
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .topbar a { color: #fff; }
+    .topbar a:hover { opacity: 0.85; }
+    .topbar-hours { opacity: 0.9; }
+
+    /* ===== HEADER ===== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(14,15,20,0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--c-border);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      gap: 24px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+    .logo img {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+    .logo-text { font-family: var(--font-display); }
+    .logo-name { font-size: 20px; font-weight: 900; color: var(--c-white); letter-spacing: 0.05em; }
+    .logo-sub { font-size: 10px; font-weight: 600; color: var(--c-muted); letter-spacing: 0.12em; text-transform: uppercase; }
+
+    /* Main Nav */
+    nav { display: flex; align-items: center; gap: 4px; }
+    .nav-link {
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      font-family: var(--font-display);
+      color: var(--c-muted);
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      white-space: nowrap;
+      position: relative;
+    }
+    .nav-link:hover, .nav-link.active { color: var(--c-white); }
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 14px;
+      right: 14px;
+      height: 2px;
+      background: var(--c-accent);
+      border-radius: 2px;
+    }
+
+    /* Dropdown */
+    .nav-item { position: relative; }
+    .nav-item:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+    .dropdown {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      background: var(--c-card);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      padding: 8px;
+      min-width: 210px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-8px);
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+      z-index: 100;
+    }
+    .dropdown a {
+      display: block;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--c-muted);
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+    .dropdown a:hover { background: rgba(255,255,255,0.05); color: var(--c-white); }
+
+    .header-cta { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .header-phone {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--c-white);
+    }
+    .header-phone:hover { color: var(--c-accent); }
+
+    /* Burger */
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 6px;
+      border-radius: 6px;
+    }
+    .burger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--c-white);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/bg-main-1-scaled.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.35);
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(14,15,20,0.7) 0%, rgba(14,15,20,0.2) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--c-accent-glow);
+      border: 1px solid rgba(232,50,10,0.3);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--c-accent-light);
+      margin-bottom: 24px;
+    }
+    .hero-eyebrow::before { content: '●'; font-size: 8px; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 68px);
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 20px;
+      line-height: 1.05;
+    }
+    .hero h1 span { color: var(--c-accent); }
+    .hero-desc {
+      font-size: 18px;
+      color: rgba(240,240,240,0.8);
+      margin-bottom: 40px;
+      max-width: 520px;
+      line-height: 1.7;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 48px; }
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .stat { }
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--c-white);
+    }
+    .stat-num span { color: var(--c-accent); }
+    .stat-label { font-size: 12px; color: var(--c-muted); margin-top: 2px; }
+
+    /* ===== SERVICES GRID ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .service-card {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      cursor: pointer;
+      group: true;
+    }
+    .service-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .service-card:hover img { transform: scale(1.05); }
+    .service-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(14,15,20,0.9) 0%, rgba(14,15,20,0.1) 60%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px;
+      transition: var(--transition);
+    }
+    .service-card:hover .service-overlay { background: linear-gradient(to top, rgba(14,15,20,0.95) 0%, rgba(14,15,20,0.3) 60%); }
+    .service-name {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .service-link {
+      font-size: 12px;
+      color: var(--c-accent-light);
+      font-weight: 600;
+      margin-top: 4px;
+      opacity: 0;
+      transform: translateY(4px);
+      transition: var(--transition);
+    }
+    .service-card:hover .service-link { opacity: 1; transform: translateY(0); }
+
+    /* ===== WHY US ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .feature-card {
+      background: var(--c-card);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      transition: var(--transition);
+    }
+    .feature-card:hover {
+      border-color: rgba(232,50,10,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+    }
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--c-accent-glow);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      color: var(--c-accent);
+      margin-bottom: 20px;
+    }
+    .feature-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--c-white);
+      margin-bottom: 10px;
+    }
+    .feature-card p { font-size: 14px; color: var(--c-muted); line-height: 1.65; }
+
+    /* ===== CHIP TUNING PROMO ===== */
+    .promo-banner {
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+    }
+    .promo-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/chi-tyuning.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.35);
+    }
+    .promo-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(14,15,20,0.9) 0%, transparent 70%);
+    }
+    .promo-content {
+      position: relative;
+      z-index: 2;
+      max-width: 540px;
+      padding: 48px;
+    }
+    .promo-content h2 {
+      font-size: clamp(22px, 3vw, 34px);
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+    .promo-content p { font-size: 16px; color: rgba(240,240,240,0.8); margin-bottom: 28px; }
+
+    /* ===== REVIEWS ===== */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .review-card {
+      background: var(--c-card);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: var(--transition);
+    }
+    .review-card:hover { border-color: rgba(232,50,10,0.25); }
+    .review-stars { color: #f59e0b; font-size: 14px; letter-spacing: 2px; }
+    .review-text {
+      font-size: 14px;
+      color: rgba(240,240,240,0.8);
+      line-height: 1.7;
+      flex: 1;
+    }
+    .review-author { display: flex; align-items: center; gap: 12px; }
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--c-accent-glow);
+      border: 2px solid rgba(232,50,10,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--c-accent-light);
+      flex-shrink: 0;
+    }
+    .author-name { font-weight: 600; font-size: 14px; color: var(--c-white); }
+    .author-source { font-size: 11px; color: var(--c-muted); }
+
+    /* ===== BONUS SECTION ===== */
+    .bonus-section {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      padding: 64px 56px;
+      background: var(--c-card);
+      border: 1px solid var(--c-border);
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+    .bonus-accent {
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 360px;
+      height: 360px;
+      background: var(--c-accent-glow);
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+    }
+    .bonus-content { position: relative; z-index: 2; max-width: 480px; }
+    .bonus-content h2 { font-size: clamp(24px, 3vw, 36px); font-weight: 900; color: var(--c-white); margin-bottom: 16px; }
+    .bonus-content p { font-size: 16px; color: var(--c-muted); margin-bottom: 28px; }
+    .bonus-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--c-accent);
+      border-radius: 100px;
+      padding: 12px 24px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 18px;
+      color: #fff;
+      box-shadow: 0 8px 32px var(--c-accent-glow);
+    }
+    .bonus-img { flex-shrink: 0; position: relative; z-index: 2; width: 320px; border-radius: var(--radius); overflow: hidden; }
+    .bonus-img img { width: 100%; height: 220px; object-fit: cover; }
+
+    /* ===== CONTACTS / FOOTER ===== */
+    .contacts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .contact-info { }
+    .contact-block { margin-bottom: 32px; }
+    .contact-block h4 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--c-muted);
+      margin-bottom: 8px;
+    }
+    .contact-value {
+      font-size: 18px;
+      font-weight: 700;
+      font-family: var(--font-display);
+      color: var(--c-white);
+    }
+    .contact-value a:hover { color: var(--c-accent); }
+    .contact-value-sub { font-size: 14px; font-weight: 500; font-family: var(--font-body); color: var(--c-muted); margin-top: 2px; }
+    .phones-list { display: flex; flex-direction: column; gap: 6px; }
+    .phone-row { display: flex; align-items: baseline; gap: 10px; }
+    .phone-dept { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-accent); min-width: 100px; }
+    .phone-num { font-size: 16px; font-weight: 700; font-family: var(--font-display); color: var(--c-white); }
+    .phone-num a:hover { color: var(--c-accent); }
+    .social-links { display: flex; gap: 12px; margin-top: 20px; }
+    .social-link {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--c-card);
+      border: 1px solid var(--c-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: var(--c-muted);
+      transition: var(--transition);
+    }
+    .social-link:hover { border-color: var(--c-accent); color: var(--c-accent); }
+
+    /* Contact Form */
+    .contact-form-wrap {
+      background: var(--c-card);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      padding: 36px;
+    }
+    .contact-form-wrap h3 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--c-white);
+      margin-bottom: 8px;
+    }
+    .contact-form-wrap p { font-size: 14px; color: var(--c-muted); margin-bottom: 28px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--c-muted);
+      margin-bottom: 6px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      font-size: 15px;
+      color: var(--c-text);
+      font-family: var(--font-body);
+      transition: var(--transition);
+      outline: none;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: rgba(232,50,10,0.5);
+      box-shadow: 0 0 0 3px var(--c-accent-glow);
+    }
+    .form-textarea { resize: vertical; min-height: 100px; }
+    .form-select { appearance: none; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .form-note { font-size: 11px; color: var(--c-muted); margin-top: 8px; }
+
+    /* Map placeholder */
+    .map-wrap {
+      border-radius: var(--radius);
+      overflow: hidden;
+      height: 340px;
+      background: var(--c-card);
+      border: 1px solid var(--c-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .map-wrap iframe { width: 100%; height: 100%; border: 0; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--c-surface);
+      border-top: 1px solid var(--c-border);
+      padding: 32px 0;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .footer-copy { font-size: 13px; color: var(--c-muted); }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { font-size: 13px; color: var(--c-muted); transition: var(--transition); }
+    .footer-links a:hover { color: var(--c-accent); }
+    .footer-review-badges { display: flex; gap: 16px; align-items: center; }
+    .badge-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--c-card);
+      border: 1px solid var(--c-border);
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--c-muted);
+      transition: var(--transition);
+    }
+    .badge-link:hover { border-color: var(--c-accent); color: var(--c-white); }
+    .badge-link img { height: 18px; width: auto; filter: grayscale(1) brightness(2); }
+    .badge-link:hover img { filter: none; }
+
+    /* ===== MOBILE NAV ===== */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(14,15,20,0.98);
+      z-index: 2000;
+      padding: 80px 24px 40px;
+      flex-direction: column;
+      gap: 8px;
+      overflow-y: auto;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav-close {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--c-card);
+      color: var(--c-white);
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mobile-nav a {
+      padding: 14px 16px;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: var(--font-display);
+      color: var(--c-text);
+      border-radius: var(--radius-sm);
+      border-bottom: 1px solid var(--c-border);
+      transition: var(--transition);
+    }
+    .mobile-nav a:hover { color: var(--c-accent); background: var(--c-card); }
+    .mobile-nav-section { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--c-muted); margin-top: 16px; padding: 0 16px 8px; }
+
+    /* ===== DIVIDER ===== */
+    .section-divider {
+      height: 1px;
+      background: var(--c-border);
+      margin: 0;
+    }
+
+    /* ===== SCROLL TO TOP ===== */
+    #scroll-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      background: var(--c-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 16px;
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition);
+      z-index: 500;
+      box-shadow: 0 4px 16px var(--c-accent-glow);
+    }
+    #scroll-top.visible { opacity: 1; pointer-events: auto; }
+    #scroll-top:hover { transform: translateY(-3px); }
+
+    /* ===== TOAST ===== */
+    .toast {
+      position: fixed;
+      bottom: 80px;
+      right: 28px;
+      background: var(--c-card);
+      border: 1px solid rgba(232,50,10,0.4);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--c-white);
+      z-index: 900;
+      transform: translateX(120%);
+      transition: transform 0.35s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      max-width: 300px;
+    }
+    .toast.show { transform: translateX(0); }
+    .toast-icon { color: #22c55e; font-size: 18px; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+      .bonus-section { flex-direction: column; gap: 32px; padding: 40px; }
+      .bonus-img { width: 100%; }
+    }
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .burger { display: flex; }
+      .header-phone { display: none; }
+      .features-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .contacts-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .bonus-section { padding: 28px; }
+      .promo-content { padding: 32px; }
+      .hero { min-height: 85vh; }
+      .section { padding: 56px 0; }
+      .section-head { margin-bottom: 36px; }
+      .topbar-inner { flex-direction: column; gap: 4px; text-align: center; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-review-badges { justify-content: center; }
+      .hero-stats { gap: 24px; }
+    }
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 30px; }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ===== REDUCED MOTION ===== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+
+    /* Form success state */
+    .form-success {
+      text-align: center;
+      padding: 32px;
+      display: none;
+    }
+    .form-success-icon { font-size: 48px; color: #22c55e; margin-bottom: 16px; }
+    .form-success h3 { color: var(--c-white); margin-bottom: 8px; }
+    .form-success p { color: var(--c-muted); font-size: 14px; }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <a href="tel:+79221020513"><i class="fas fa-phone"></i> +7 (922) 102-05-13</a>
+        <span>ул. Машиностроителей, 45А лит.Б, Екатеринбург</span>
+        <span class="topbar-hours"><i class="far fa-clock"></i> Без выходных · 10:00–21:00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="logo" aria-label="PRO MOTORS — Главная">
+          <img src="images/logo-promotors-2.png" alt="PRO MOTORS" width="48" height="48">
+          <div class="logo-text">
+            <div class="logo-name">PRO MOTORS</div>
+            <div class="logo-sub">Автосервис · Екатеринбург</div>
+          </div>
+        </a>
+
+        <nav aria-label="Основная навигация">
+          <a href="#" class="nav-link active">Главная</a>
+          <div class="nav-item">
+            <a href="#services" class="nav-link">Услуги <i class="fas fa-chevron-down" style="font-size:10px; opacity:0.6"></i></a>
+            <div class="dropdown">
+              <a href="https://promotors.pro/diagnostika-avtomobilja-ekaterinburg/">Диагностика</a>
+              <a href="https://promotors.pro/tehobsluzhivanie-ekaterinburg/">Техобслуживание</a>
+              <a href="https://promotors.pro/remont-dvs-ekaterinburg/">Ремонт ДВС</a>
+              <a href="https://promotors.pro/remont-podveski-ekaterinburg/">Ходовая и подвеска</a>
+              <a href="https://promotors.pro/remont-avtojelektriki-ekaterinburg/">Автоэлектрик</a>
+              <a href="https://promotors.pro/kuzovnoj-remont-ekaterinburg/">Кузовной ремонт</a>
+              <a href="https://promotors.pro/shinomontazh-ekaterinburg/">Шиномонтаж</a>
+              <a href="https://promotors.pro/chip-tuning/">Чип-тюнинг</a>
+              <a href="https://promotors.pro/udalenie-katalizatora-ekaterinburg/">Удаление катализатора</a>
+            </div>
+          </div>
+          <a href="https://promotors.pro/remont-hendaj-v-ekaterinburge/" class="nav-link">Ремонт Hyundai</a>
+          <a href="https://promotors.pro/remont-kia-v-ekaterinburge/" class="nav-link">KIA</a>
+          <div class="nav-item">
+            <a href="https://promotors.pro/zapchasti-hyundai-ekaterinburg/" class="nav-link">Запчасти <i class="fas fa-chevron-down" style="font-size:10px; opacity:0.6"></i></a>
+            <div class="dropdown">
+              <a href="https://promotors.pro/zapchasti-hyundai-ekaterinburg/">Запчасти Hyundai</a>
+              <a href="https://promotors.pro/zapchasti-kia-ekaterinburg/">Запчасти KIA</a>
+              <a href="https://promotors.pro/motornoe-maslo-ekaterinburg/">Моторные масла ADDINOL</a>
+            </div>
+          </div>
+          <a href="https://promotors.pro/avtoservis-ekaterinburg/" class="nav-link">О нас</a>
+          <a href="https://promotors.pro/category/nashi-raboty/" class="nav-link">Наши работы</a>
+        </nav>
+
+        <div class="header-cta">
+          <a href="tel:+79221020513" class="header-phone" aria-label="Позвонить в сервис">
+            <i class="fas fa-phone" style="font-size:12px; margin-right:6px; color:var(--c-accent)"></i>+7 (922) 102-05-13
+          </a>
+          <button class="btn btn-primary" onclick="openModal()" style="padding:10px 20px; font-size:13px;">
+            Записаться
+          </button>
+          <button class="burger" id="burger-btn" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Мобильная навигация">
+    <button class="mobile-nav-close" id="nav-close" aria-label="Закрыть меню"><i class="fas fa-times"></i></button>
+    <a href="#">Главная</a>
+    <span class="mobile-nav-section">Услуги</span>
+    <a href="https://promotors.pro/diagnostika-avtomobilja-ekaterinburg/">Диагностика</a>
+    <a href="https://promotors.pro/tehobsluzhivanie-ekaterinburg/">Техобслуживание</a>
+    <a href="https://promotors.pro/remont-dvs-ekaterinburg/">Ремонт ДВС</a>
+    <a href="https://promotors.pro/remont-podveski-ekaterinburg/">Ходовая и подвеска</a>
+    <a href="https://promotors.pro/remont-avtojelektriki-ekaterinburg/">Автоэлектрик</a>
+    <a href="https://promotors.pro/kuzovnoj-remont-ekaterinburg/">Кузовной ремонт</a>
+    <a href="https://promotors.pro/shinomontazh-ekaterinburg/">Шиномонтаж</a>
+    <a href="https://promotors.pro/chip-tuning/">Чип-тюнинг</a>
+    <a href="https://promotors.pro/udalenie-katalizatora-ekaterinburg/">Удаление катализатора</a>
+    <span class="mobile-nav-section">Марки</span>
+    <a href="https://promotors.pro/remont-hendaj-v-ekaterinburge/">Ремонт Hyundai</a>
+    <a href="https://promotors.pro/remont-kia-v-ekaterinburge/">Ремонт KIA</a>
+    <span class="mobile-nav-section">Запчасти</span>
+    <a href="https://promotors.pro/zapchasti-hyundai-ekaterinburg/">Запчасти Hyundai</a>
+    <a href="https://promotors.pro/zapchasti-kia-ekaterinburg/">Запчасти KIA</a>
+    <a href="https://promotors.pro/motornoe-maslo-ekaterinburg/">Масла ADDINOL</a>
+    <span class="mobile-nav-section">О компании</span>
+    <a href="https://promotors.pro/avtoservis-ekaterinburg/">О нас</a>
+    <a href="https://promotors.pro/category/nashi-raboty/">Наши работы</a>
+    <div style="margin-top: 24px;">
+      <button class="btn btn-primary" onclick="openModal(); closeMobileNav();" style="width:100%; justify-content:center;">
+        <i class="fas fa-calendar-check"></i> Записаться на сервис
+      </button>
+    </div>
+    <a href="tel:+79221020513" style="text-align:center; font-size:20px; font-weight:900; color:var(--c-white); padding:20px 16px;">
+      <i class="fas fa-phone" style="color:var(--c-accent); margin-right:8px"></i>+7 (922) 102-05-13
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow">Автосервис на Уралмаше</div>
+        <h1>Ваш автомобиль<br>в надёжных <span>руках</span></h1>
+        <p class="hero-desc">
+          Профессиональный ремонт и обслуживание Hyundai &amp; KIA. Гарантия на работы до 1 года, более 1000 запчастей в наличии.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="openModal()">
+            <i class="fas fa-calendar-check"></i> Записаться онлайн
+          </button>
+          <a href="#services" class="btn btn-outline">
+            Наши услуги <i class="fas fa-arrow-down"></i>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">150<span>+</span></div>
+            <div class="stat-label">клиентов в месяц</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">1<span> год</span></div>
+            <div class="stat-label">гарантия на работы</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">1000<span>+</span></div>
+            <div class="stat-label">запчастей в наличии</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Что мы делаем</span>
+        <h2 class="section-title">АВТОСЕРВИС PRO MOTORS</h2>
+        <p class="section-subtitle">Полный спектр услуг по ремонту и обслуживанию автомобилей в Екатеринбурге</p>
+      </div>
+      <div class="services-grid">
+        <a href="https://promotors.pro/kuzovnoj-remont-ekaterinburg/" class="service-card">
+          <img src="images/Kuzovnoj-remont-400x284.jpeg" alt="Кузовной ремонт" loading="lazy" width="400" height="284">
+          <div class="service-overlay">
+            <div class="service-name">Кузовной ремонт</div>
+            <div class="service-link">Подробнее →</div>
+          </div>
+        </a>
+        <a href="https://promotors.pro/shinomontazh-ekaterinburg/" class="service-card">
+          <img src="images/shinomontazh-sale-ekaterinburg.jpg" alt="Шиномонтаж" loading="lazy" width="400" height="284">
+          <div class="service-overlay">
+            <div class="service-name">Шиномонтаж</div>
+            <div class="service-link">Подробнее →</div>
+          </div>
+        </a>
+        <a href="https://promotors.pro/remont-podveski-ekaterinburg/" class="service-card">
+          <img src="images/RemontPodveski-400x284.jpeg" alt="Ремонт подвески" loading="lazy" width="400" height="284">
+          <div class="service-overlay">
+            <div class="service-name">Ходовая и подвеска</div>
+            <div class="service-link">Подробнее →</div>
+          </div>
+        </a>
+        <a href="https://promotors.pro/chip-tuning/" class="service-card">
+          <img src="images/CHiptyuning-400x284.jpeg" alt="Чип-тюнинг" loading="lazy" width="400" height="284">
+          <div class="service-overlay">
+            <div class="service-name">Чип-тюнинг</div>
+            <div class="service-link">Подробнее →</div>
+          </div>
+        </a>
+        <a href="https://promotors.pro/udalenie-katalizatora-ekaterinburg/" class="service-card">
+          <img src="images/Udalenie-katalizatora-400x284.jpeg" alt="Удаление катализатора" loading="lazy" width="400" height="284">
+          <div class="service-overlay">
+            <div class="service-name">Удаление катализатора</div>
+            <div class="service-link">Подробнее →</div>
+          </div>
+        </a>
+        <a href="https://promotors.pro/remont-avtojelektriki-ekaterinburg/" class="service-card">
+          <img src="images/Avtoelektrika-400x284.jpeg" alt="Автоэлектрика" loading="lazy" width="400" height="284">
+          <div class="service-overlay">
+            <div class="service-name">Автоэлектрика</div>
+            <div class="service-link">Подробнее →</div>
+          </div>
+        </a>
+        <a href="https://promotors.pro/remont-dvs-ekaterinburg/" class="service-card">
+          <img src="images/RemontDVS-400x284.jpeg" alt="Ремонт ДВС" loading="lazy" width="400" height="284">
+          <div class="service-overlay">
+            <div class="service-name">Ремонт двигателя</div>
+            <div class="service-link">Подробнее →</div>
+          </div>
+        </a>
+        <a href="https://promotors.pro/tehobsluzhivanie-ekaterinburg/" class="service-card">
+          <img src="images/Tehobsluzhivanie-400x284.jpeg" alt="Техобслуживание" loading="lazy" width="400" height="284">
+          <div class="service-overlay">
+            <div class="service-name">Техобслуживание</div>
+            <div class="service-link">Подробнее →</div>
+          </div>
+        </a>
+        <a href="https://promotors.pro/diagnostika-avtomobilja-ekaterinburg/" class="service-card">
+          <img src="images/Diagnostika-400x284.jpeg" alt="Диагностика" loading="lazy" width="400" height="284">
+          <div class="service-overlay">
+            <div class="service-name">Компьютерная диагностика</div>
+            <div class="service-link">Подробнее →</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- WHY US -->
+  <section class="section section--dark" id="about">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Наши преимущества</span>
+        <h2 class="section-title">Лучший сервис KIA и Hyundai<br>в Екатеринбурге</h2>
+        <p class="section-subtitle">Мы всегда с радостью знакомимся с новыми клиентами и становимся хорошими друзьями</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Гарантия качества</h3>
+          <p>Предоставляем гарантию до 1 года на все слесарные работы и 1 год на кузовной ремонт. Работаем честно.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-boxes"></i></div>
+          <h3>Запчасти в наличии</h3>
+          <p>Более 1 000 наименований запчастей для KIA и Hyundai в наличии. Под заказ — от 1 рабочего дня.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-oil-can"></i></div>
+          <h3>Замена масла</h3>
+          <p>Официальный дистрибьютор немецких масел ADDINOL. Профессиональная замена моторного масла с гарантией.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-couch"></i></div>
+          <h3>Комфортная зона ожидания</h3>
+          <p>TV, Wi-Fi, кофемашина и Xbox — ожидание пройдёт быстро и комфортно, пока мастера ремонтируют ваш авто.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-user-tie"></i></div>
+          <h3>Опытные специалисты</h3>
+          <p>Мастера с многолетним опытом работы с Hyundai и KIA. Все работы выполняются профессионально и в срок.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
+          <h3>Без выходных</h3>
+          <p>Работаем ежедневно с 10:00 до 21:00. Запись онлайн или по телефону — в любое удобное для вас время.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHIP TUNING PROMO -->
+  <section class="section">
+    <div class="container">
+      <div class="promo-banner">
+        <div class="promo-bg" aria-hidden="true"></div>
+        <div class="promo-content">
+          <span class="section-label" style="margin-bottom:14px; display:block;">Чип-тюнинг</span>
+          <h2>Ваш автомобиль<br>способен на большее</h2>
+          <p>Чип-тюнинг от 3 000 ₽. Лицензионные прошивки и гарантия возврата средств, если результат вас не устроит.</p>
+          <a href="https://promotors.pro/chip-tuning/" class="btn btn-primary">
+            Узнать подробности <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- REVIEWS -->
+  <section class="section section--dark" id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Отзывы клиентов</span>
+        <h2 class="section-title">Более 150 довольных клиентов<br>каждый месяц</h2>
+        <p class="section-subtitle">Никто не расскажет про нас лучше, чем наши любимые клиенты</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">«Уже и не помню сколько лет и сколько своих семейных автомобилей я сюда пригонял. Работы как всегда сделаны быстро и качественно, получены корректные пояснения и ответы на насущные вопросы.»</p>
+          <div class="review-author">
+            <div class="author-avatar">А</div>
+            <div>
+              <div class="author-name">Алексей SPL</div>
+              <div class="author-source"><i class="fas fa-external-link-alt" style="font-size:10px"></i> Flamp</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">«Вежливый персонал, чёткость в выполнении договорённостей, комфортная зона ожидания. Телевизор, Wi-Fi, кулер и кофемашина. Работа специалистов на высшем уровне.»</p>
+          <div class="review-author">
+            <div class="author-avatar">Л</div>
+            <div>
+              <div class="author-name">Лев Стерлингов</div>
+              <div class="author-source"><i class="fas fa-external-link-alt" style="font-size:10px"></i> Flamp</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">«Спустя три сервиса я нашла Вас! Индивидуальный подход, адекватные цены, быстро и качественно. Не навешивали лишнего — всё чётко по факту (это важно когда ты блондинка на Mazda3)))»</p>
+          <div class="review-author">
+            <div class="author-avatar">А</div>
+            <div>
+              <div class="author-name">Александра Сергеевна</div>
+              <div class="author-source"><i class="fas fa-external-link-alt" style="font-size:10px"></i> Flamp</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">«Вырезал катализатор на Kia Ceed. Всё сделано в лучшем виде, проблем не возникло. В сервисе чисто, опрятно, деловая обстановка. В зоне для клиентов есть телевизор, кофемат, Xbox.»</p>
+          <div class="review-author">
+            <div class="author-avatar">А</div>
+            <div>
+              <div class="author-name">Александр Бобрышев</div>
+              <div class="author-source"><i class="fas fa-external-link-alt" style="font-size:10px"></i> Flamp</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">«Менял сцепление в сборе и выжимной подшипник. Сделали в срок, денег взяли столько, сколько обещали. Проехал уже несколько тысяч километров — сцепление работает отлично. Рекомендую.»</p>
+          <div class="review-author">
+            <div class="author-avatar">Д</div>
+            <div>
+              <div class="author-name">Денис Дрянин</div>
+              <div class="author-source"><i class="fas fa-external-link-alt" style="font-size:10px"></i> Flamp</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card" style="align-items:center; justify-content:center; background: var(--c-accent-glow); border-color: rgba(232,50,10,0.3); text-align:center; padding:40px;">
+          <i class="fas fa-star" style="font-size:36px; color:var(--c-accent); margin-bottom:16px;"></i>
+          <h3 style="font-size:18px; color:var(--c-white); margin-bottom:8px;">Сотни отзывов на Flamp</h3>
+          <p style="font-size:14px; color:var(--c-muted); margin-bottom:20px;">Читайте реальные отзывы наших клиентов на независимой платформе</p>
+          <a href="https://ekaterinburg.flamp.ru/feed/biz?id=26633" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size:13px;">
+            Все отзывы на Flamp <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BONUS -->
+  <section class="section">
+    <div class="container">
+      <div class="bonus-section">
+        <div class="bonus-accent" aria-hidden="true"></div>
+        <div class="bonus-content">
+          <span class="section-label" style="margin-bottom:14px; display:block;">Программа лояльности</span>
+          <h2>Бонусная накопительная система</h2>
+          <p>Расплачивайтесь за работы бонусами! За любые услуги 5% стоимости возвращается на вашу карту лояльности.</p>
+          <div class="bonus-badge">
+            <i class="fas fa-percentage"></i> 5% кэшбэк за каждый визит
+          </div>
+        </div>
+        <div class="bonus-img">
+          <img src="images/bonusnaya-sistema3.jpg" alt="Бонусная система PRO MOTORS" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- CONTACTS -->
+  <section class="section section--dark" id="contacts">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Где мы находимся</span>
+        <h2 class="section-title">Контакты</h2>
+        <p class="section-subtitle">Запишитесь онлайн или свяжитесь с нами удобным способом</p>
+      </div>
+
+      <div class="contacts-grid">
+        <div>
+          <div class="contact-info">
+            <div class="contact-block">
+              <h4>Адрес</h4>
+              <div class="contact-value">г. Екатеринбург, район Уралмаш</div>
+              <div class="contact-value-sub">ул. Машиностроителей, д. 45А лит. Б</div>
+            </div>
+            <div class="contact-block">
+              <h4>Режим работы</h4>
+              <div class="contact-value">Ежедневно, без выходных</div>
+              <div class="contact-value-sub">с 10:00 до 21:00</div>
+            </div>
+            <div class="contact-block">
+              <h4>Телефоны</h4>
+              <div class="phones-list">
+                <div class="phone-row">
+                  <span class="phone-dept">Сервис</span>
+                  <span class="phone-num"><a href="tel:+79221020513">+7 (922) 102-05-13</a></span>
+                </div>
+                <div class="phone-row">
+                  <span class="phone-dept">Запчасти</span>
+                  <span class="phone-num"><a href="tel:+73433821332">+7 (343) 382-13-32</a></span>
+                </div>
+                <div class="phone-row">
+                  <span class="phone-dept">WhatsApp</span>
+                  <span class="phone-num"><a href="tel:+79221088558">+7 (922) 108-85-58</a></span>
+                </div>
+                <div class="phone-row">
+                  <span class="phone-dept">Кузов</span>
+                  <span class="phone-num"><a href="tel:+79506382682">+7 (950) 638-26-82</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="https://vk.com/promotors" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="ВКонтакте">
+                <i class="fab fa-vk"></i>
+              </a>
+              <a href="https://ekaterinburg.flamp.ru/firm/pro_motors_avtoservis-70000001006154969" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Flamp">
+                <i class="fas fa-star"></i>
+              </a>
+              <a href="https://www.drive2.ru/users/promotors-ekb/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Drive2">
+                <i class="fas fa-car"></i>
+              </a>
+              <a href="https://wa.me/79221088558" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="map-wrap" style="margin-top:32px;">
+            <iframe
+              title="Карта проезда к автосервису PRO MOTORS"
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3Aadaae6d26de791027bce1e9e4c853b47e0a088a3870904e72a1814b6db5b5c81&source=constructor"
+              width="100%"
+              height="340"
+              frameborder="0"
+              allowfullscreen="true"
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div>
+          <div class="contact-form-wrap">
+            <h3>Записаться на сервис</h3>
+            <p>Оставьте заявку — мы свяжемся с вами в течение дня и подберём удобное время</p>
+
+            <div id="contact-form-container">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="f-name">Ваше имя</label>
+                  <input type="text" id="f-name" class="form-input" placeholder="Иван Иванов" autocomplete="name">
+                </div>
+                <div class="form-group">
+                  <label for="f-phone">Телефон *</label>
+                  <input type="tel" id="f-phone" class="form-input" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="f-service">Услуга</label>
+                <select id="f-service" class="form-select form-input">
+                  <option value="">Выберите услугу...</option>
+                  <option>Диагностика</option>
+                  <option>Техническое обслуживание</option>
+                  <option>Ремонт ДВС</option>
+                  <option>Ходовая и подвеска</option>
+                  <option>Автоэлектрика</option>
+                  <option>Кузовной ремонт</option>
+                  <option>Шиномонтаж</option>
+                  <option>Чип-тюнинг</option>
+                  <option>Удаление катализатора</option>
+                  <option>Запчасти</option>
+                  <option>Другое</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="f-car">Автомобиль</label>
+                <input type="text" id="f-car" class="form-input" placeholder="Hyundai Solaris 2019">
+              </div>
+              <div class="form-group">
+                <label for="f-comment">Комментарий</label>
+                <textarea id="f-comment" class="form-textarea" placeholder="Опишите проблему или пожелание..."></textarea>
+              </div>
+              <button type="button" class="btn btn-primary" style="width:100%; justify-content:center; padding:16px;" onclick="submitForm()">
+                <i class="fas fa-paper-plane"></i> Отправить заявку
+              </button>
+              <p class="form-note" style="margin-top:12px;">
+                <i class="fas fa-lock" style="color:var(--c-accent); margin-right:4px"></i>
+                Ваши данные в безопасности и не передаются третьим лицам
+              </p>
+            </div>
+
+            <div class="form-success" id="form-success">
+              <div class="form-success-icon"><i class="fas fa-check-circle"></i></div>
+              <h3>Заявка отправлена!</h3>
+              <p>Наш менеджер свяжется с вами в ближайшее время. Спасибо, что выбрали PRO MOTORS!</p>
+              <button class="btn btn-outline" style="margin-top:20px;" onclick="resetForm()">Отправить ещё</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-copy">
+          © 2017–2026 PRO MOTORS · Автосервис на Уралмаше, Екатеринбург
+        </div>
+        <div class="footer-review-badges">
+          <a href="https://ekaterinburg.flamp.ru/firm/pro_motors_avtoservis-70000001006154969" target="_blank" rel="noopener noreferrer" class="badge-link">
+            <img src="images/flamp.png" alt="Flamp"> Отзывы на Flamp
+          </a>
+          <a href="https://www.drive2.ru/users/promotors-ekb/" target="_blank" rel="noopener noreferrer" class="badge-link">
+            <img src="images/drive2.png" alt="Drive2"> Drive2
+          </a>
+        </div>
+        <div class="footer-links">
+          <a href="https://promotors.pro/avtoservis-ekaterinburg/">О компании</a>
+          <a href="https://promotors.pro/category/nashi-raboty/">Работы</a>
+          <a href="#contacts">Контакты</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL (inline callback form) -->
+  <div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+    style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:9000; align-items:center; justify-content:center; padding:20px;">
+    <div style="background:var(--c-card); border:1px solid var(--c-border); border-radius:var(--radius); padding:40px; max-width:440px; width:100%; position:relative; box-shadow:var(--shadow);">
+      <button onclick="closeModal()" aria-label="Закрыть"
+        style="position:absolute; top:16px; right:16px; width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,0.05); border:1px solid var(--c-border); color:var(--c-muted); font-size:16px; display:flex; align-items:center; justify-content:center; cursor:pointer;">
+        <i class="fas fa-times"></i>
+      </button>
+      <h2 id="modal-title" style="font-size:22px; font-weight:900; color:var(--c-white); margin-bottom:8px;">Запись на сервис</h2>
+      <p style="font-size:14px; color:var(--c-muted); margin-bottom:28px;">Оставьте номер телефона — мы свяжемся с вами в течение дня.</p>
+      <div id="modal-form">
+        <div class="form-group">
+          <label for="m-name">Имя</label>
+          <input type="text" id="m-name" class="form-input" placeholder="Ваше имя" autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label for="m-phone">Телефон *</label>
+          <input type="tel" id="m-phone" class="form-input" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+        </div>
+        <button type="button" class="btn btn-primary" style="width:100%; justify-content:center; padding:14px; margin-top:4px;" onclick="submitModal()">
+          <i class="fas fa-phone"></i> Перезвоните мне
+        </button>
+        <p class="form-note" style="margin-top:10px; text-align:center;">
+          <i class="fas fa-shield-alt" style="color:var(--c-accent); margin-right:4px"></i>
+          Данные защищены и не передаются третьим лицам
+        </p>
+      </div>
+      <div id="modal-success" style="display:none; text-align:center; padding:20px 0;">
+        <div style="font-size:48px; color:#22c55e; margin-bottom:16px;"><i class="fas fa-check-circle"></i></div>
+        <h3 style="color:var(--c-white); margin-bottom:8px;">Заявка принята!</h3>
+        <p style="color:var(--c-muted); font-size:14px;">Ожидайте звонка. Спасибо, что выбрали PRO MOTORS!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCROLL TO TOP -->
+  <button id="scroll-top" aria-label="Наверх" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">
+    <span class="toast-icon"><i class="fas fa-check-circle"></i></span>
+    <span id="toast-msg">Заявка отправлена!</span>
+  </div>
+
+  <!-- JS: Minimal, no jQuery dependency -->
+  <script>
+    // --- Burger / Mobile nav ---
+    const burgerBtn = document.getElementById('burger-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    const navClose = document.getElementById('nav-close');
+
+    function openMobileNav() {
+      mobileNav.classList.add('open');
+      burgerBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+      mobileNav.classList.remove('open');
+      burgerBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    burgerBtn.addEventListener('click', openMobileNav);
+    navClose.addEventListener('click', closeMobileNav);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeMobileNav(); closeModal(); } });
+
+    // --- Scroll to top ---
+    const scrollTopBtn = document.getElementById('scroll-top');
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+
+    // --- Modal ---
+    const modalOverlay = document.getElementById('modal-overlay');
+    function openModal() {
+      modalOverlay.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      document.getElementById('modal-form').style.display = 'block';
+      document.getElementById('modal-success').style.display = 'none';
+      setTimeout(() => { document.getElementById('m-phone').focus(); }, 100);
+    }
+    function closeModal() {
+      modalOverlay.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    modalOverlay.addEventListener('click', e => { if (e.target === modalOverlay) closeModal(); });
+
+    function submitModal() {
+      const phone = document.getElementById('m-phone').value.trim();
+      if (!phone) { document.getElementById('m-phone').focus(); return; }
+      document.getElementById('modal-form').style.display = 'none';
+      document.getElementById('modal-success').style.display = 'block';
+      showToast('Заявка принята! Скоро перезвоним.');
+    }
+
+    // --- Main contact form ---
+    function submitForm() {
+      const phone = document.getElementById('f-phone').value.trim();
+      if (!phone) { document.getElementById('f-phone').focus(); return; }
+      document.getElementById('contact-form-container').style.display = 'none';
+      document.getElementById('form-success').style.display = 'flex';
+      showToast('Заявка отправлена! Ожидайте звонка.');
+    }
+    function resetForm() {
+      document.getElementById('contact-form-container').style.display = 'block';
+      document.getElementById('form-success').style.display = 'none';
+      document.getElementById('f-phone').value = '';
+      document.getElementById('f-name').value = '';
+      document.getElementById('f-comment').value = '';
+      document.getElementById('f-car').value = '';
+    }
+
+    // --- Toast ---
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-msg').textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 4000);
+    }
+
+    // --- Phone mask (simple) ---
+    function phoneMask(input) {
+      input.addEventListener('input', function() {
+        let v = this.value.replace(/\D/g, '');
+        if (v.startsWith('8')) v = '7' + v.slice(1);
+        if (!v.startsWith('7')) v = '7' + v;
+        v = v.slice(0, 11);
+        let out = '+7';
+        if (v.length > 1) out += ' (' + v.slice(1, 4);
+        if (v.length > 4) out += ') ' + v.slice(4, 7);
+        if (v.length > 7) out += '-' + v.slice(7, 9);
+        if (v.length > 9) out += '-' + v.slice(9, 11);
+        this.value = out;
+      });
+    }
+    phoneMask(document.getElementById('f-phone'));
+    phoneMask(document.getElementById('m-phone'));
+
+    // --- Smooth scroll for anchor links ---
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          closeMobileNav();
+        }
+      });
+    });
+
+    // --- Active nav on scroll ---
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { threshold: 0.4 });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
